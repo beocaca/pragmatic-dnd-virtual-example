@@ -79,4 +79,3 @@ const handleTaskMoved = (taskId: string, newStatus: TaskStatus, newIndex: number
   tasks.value.splice(actualIndex, 0, updatedTask)
 }
 </script>
-</script>
