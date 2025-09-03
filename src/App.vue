@@ -9,6 +9,15 @@
       </p>
       <VirtualList :items="items" @reorder="handleReorder" />
     </div>
+    <div class="flex gap-6 overflow-x-auto pb-6">
+      <KanbanColumn 
+        v-for="column in columns" 
+        :key="column.id"
+        :column="column"
+        :tasks="getTasksForColumn(column.id)"
+        @task-moved="handleTaskMoved"
+      />
+    </div>
   </div>
 </template>
 
